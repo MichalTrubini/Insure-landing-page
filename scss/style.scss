@@ -1,3 +1,31 @@
 @import 'normalize','settings','variables';
 
 //TYPOGRAPHY AND COLORS ----START
+
+body {
+    font-family: 'Karla', sans-serif;
+}
+
+h1,h2, h3 {
+    font-family: 'DM Serif Display', serif;
+}
+
+h1 {
+    color: $color-heading-white;
+    font-size: 4.8rem;
+    line-height: 4.8rem;
+    letter-spacing: -0.67px;
+}
+
+h2 {
+
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+}
+
+footer {
+    background: $background-footer;
+}

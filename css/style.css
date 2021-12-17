@@ -175,6 +175,7 @@ h1 {
   font-size: 4.8rem;
   line-height: 4.8rem;
   letter-spacing: -0.67px;
+  font-weight: 400;
 }
 
 p {
@@ -188,5 +189,38 @@ footer {
 
 li {
   list-style: none;
+}
+
+.nav {
+  padding: 2.4rem 2.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav__mobile-menu {
+  display: none;
+}
+
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #fff;
+}
+
+.hero__content {
+  background: #2d2640;
+  padding: 9.3rem 2.4rem;
 }
 /*# sourceMappingURL=style.css.map */

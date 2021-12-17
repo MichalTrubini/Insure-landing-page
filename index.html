@@ -8,94 +8,148 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
   
   <title>Frontend Mentor | Insure landing page</title>
 
 </head>
-<body class="">
+<body>
   <header class="header">
-    <nav class="">
-      <div class="">
-        <img src="images/logo.svg" alt="Insure">
+    <nav class="nav">
+      <div class="nav__logo-container">
+        <img src="images/logo.svg" alt="Insure" class="nav__logo">
       </div>
-      <div class="">
-        <img src="images/icon-hamburger.svg" alt="menu">
+      <div class="nav__mobile-menu">
+        <ul class="nav__list">
+          <li class="nav__list-item"><a href="#" class="nav__link">How we work</a></li>
+          <li class="nav__list-item"><a href="#" class="nav__link">Blog</a></li>
+          <li class="nav__list-item"><a href="#" class="nav__link">Account</a></li>
+          <li class="nav__list-item"><a href="#" class="nav__link">View plans</a></li>
+        </ul>
+      </div>
+      <div class="nav__menu-icon-container">
+        <img src="images/icon-hamburger.svg" alt="menu" class="nav__icon">
       </div>
     </nav>
   </header>
-  <main>
-    <section>
-      <div>
-        <img src="images/image-intro-mobile.jpg" alt="hero image">
+  <main class="main">
+    <section class="hero">
+      <div class="hero__image-container">
+        <img src="images/image-intro-mobile.jpg" alt="hero image" class="hero__image">
       </div>
-      <div class="">
-        <h1 class="">Humanizing your insurance.</h1>
-        <p class="">
+      <div class="hero__content">
+        <h1 class="hero__heading">Humanizing your insurance.</h1>
+        <p class="hero__about">
           Get your life insurance coverage easier and faster. We blend our expertise 
           and technology to help you find the plan that’s right for you. Ensure you 
           and your loved ones are protected.
         </p>
+        <a href="#" class="hero__link">View plans</a>
       </div>
     </section>
+    <section class="highlights">
+      <h2 class="highlights__heading">
+        We’re different
+      </h2>
+      <div class="highlights__wrapper">
+        <div class="highlights__highlight">
+          <img src="images/icon-snappy-process.svg" alt="Snappy process" class="highlights__icon">
+          <h3 class="highlight__subtitle">
+            Snappy Process
+          </h3>
+          <p class="highlight__about">
+            Our application process can be completed in minutes, not hours. Don’t get 
+            stuck filling in tedious forms.
+          </p>
+        </div>
+      </div>
+      <div class="highlights__wrapper">
+        <div class="highlights__highlight">
+          <img src="images/icon-affordable-prices.svg" alt="Affordable prices" class="highlights__icon">
+          <h3 class="highlight__subtitle">
+            Affordable Prices
+          </h3>
+          <p class="highlight__about">
+            We don’t want you worrying about high monthly costs. Our prices may be low, 
+            but we still offer the best coverage possible.  
+          </p>
+        </div>
+      </div>
+      <div class="highlights__wrapper">
+        <div class="highlights__highlight">
+          <img src="images/icon-people-first.svg" alt="People first" class="highlights__icon">
+          <h3 class="highlight__subtitle">
+            People First
+          </h3>
+          <p class="highlight__about">
+            Our plans aren’t full of conditions and clauses to prevent payouts. We make 
+            sure you’re covered when you need it.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="cta">
+      <h2 class="cta__heading">
+        Find out more about how we work
+      </h2>
+      <a href="#" class="cta__link">How we work</a>
+    </section>
   </main>
-  How we work
-  Blog
-  Account
-  View plans
-
-  
-
-
-
-  View plans
-
-  We’re different
-
-  Snappy Process
-
-  Our application process can be completed in minutes, not hours. Don’t get 
-  stuck filling in tedious forms.
-
-  Affordable Prices
-
-  We don’t want you worrying about high monthly costs. Our prices may be low, 
-  but we still offer the best coverage possible.
-
-  People First
-
-  Our plans aren’t full of conditions and clauses to prevent payouts. We make 
-  sure you’re covered when you need it.
-
-  Find out more about how we work
-
-  How we work
-
-  Our company
-
-  How we work
-  Why Insure?
-  View plans
-  Reviews
-
-  Help me
-
-  FAQ
-  Terms of use
-  Privacy policy
-  Cookies
-
-  Contact
-
-  Sales
-  Support
-  Live chat
-
-  Others
-
-  Careers
-  Press
-  Licenses
-
+  <footer class="footer">
+    <div class="footer__wrapper">
+      <img src="images/logo.svg" alt="Inspire" class="footer__logo">
+      <div class="footer__social-block">
+        <a href="#" class="footer__social-link" aria-label="Click to access our Facebook account"><i class="fab fa-facebook-square"></i></a>
+        <a href="#" class="footer__social-link" aria-label="Click to access our Twitter account"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="footer__social-link" aria-label="Click to access our Pinterest account"><i class="fab fa-pinterest"></i></a>
+        <a href="#" class="footer__social-link" aria-label="Click to access our Instagram account"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="footer__wrapper">
+      <div class="footer__links">
+        <p class="footer__title">
+          Our company
+        </p>
+        <ul class="footer__list">
+          <li class="footer__list-item"><a href="#" class="footer__link">How we work</a></li>
+          <li class="footer__list-item"><a href="#" class="footer__link">Why Insure?</a></li>
+          <li class="footer__list-item"><a href="#" class="footer__link">View plans</a></li>
+          <li class="footer__list-item"><a href="#" class="footer__link">Reviews</a></li>
+        </ul>
+      </div>
+      <div class="footer__links">
+        <p class="footer__title">
+          Help me
+        </p>
+        <ul class="footer__list">
+          <li class="footer__list-item"><a href="#" class="footer__link">FAQ</a></li>
+          <li class="footer__list-item"><a href="#" class="footer__link">Terms of use</a></li>
+          <li class="footer__list-item"><a href="#" class="footer__link">Privacy policy</a></li>
+          <li class="footer__list-item"><a href="#" class="footer__link">Cookies</a></li>
+        </ul>
+      </div>
+      <div class="footer__links">
+        <p class="footer__title">
+          Contact
+        </p>
+        <ul class="footer__list">
+          <li class="footer__list-item"><a href="#" class="footer__link">Sales</a></li>
+          <li class="footer__list-item"><a href="#" class="footer__link">Support</a></li>
+          <li class="footer__list-item"><a href="#" class="footer__link">Live chat</a></li>
+        </ul>
+      </div>
+      <div class="footer__links">
+        <p class="footer__title">
+          Others
+        </p>
+        <ul class="footer__list">
+          <li class="footer__list-item"><a href="#" class="footer__link">Careers</a></li>
+          <li class="footer__list-item"><a href="#" class="footer__link">Press</a></li>
+          <li class="footer__list-item"><a href="#" class="footer__link">Licenses</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

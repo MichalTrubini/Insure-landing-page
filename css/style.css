@@ -163,6 +163,7 @@ html {
 
 body {
   font-family: 'Karla', sans-serif;
+  text-align: center;
 }
 
 h1, h2, h3 {
@@ -183,5 +184,9 @@ p {
 
 footer {
   background: #fafafa;
+}
+
+li {
+  list-style: none;
 }
 /*# sourceMappingURL=style.css.map */

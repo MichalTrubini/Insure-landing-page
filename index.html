@@ -17,70 +17,114 @@
 <body>
   <header class="header">
     <nav class="nav">
-      <div class="nav__logo-container">
-        <img src="images/logo.svg" alt="Insure" class="nav__logo">
+      <div class="nav__wrapper">
+        <div class="nav__logo-container">
+          <img src="images/logo.svg" alt="Insure" class="nav__logo">
+        </div>
+        <div class="nav__menu">
+          <ul class="nav__list">
+            <li class="nav__list-item"><a href="#" class="nav__link">How we work</a></li>
+            <li class="nav__list-item"><a href="#" class="nav__link">Blog</a></li>
+            <li class="nav__list-item"><a href="#" class="nav__link">Account</a></li>
+          </ul>
+          <a href="#" class="nav__link nav__link-cta nav__link-cta--primary">View plans</a>
+        </div>
+        <div class="nav__menu-icon-container">
+          <img src="images/icon-hamburger.svg" alt="menu" class="nav__icon">
+        </div>
       </div>
       <div class="nav__mobile-menu">
         <ul class="nav__list">
           <li class="nav__list-item"><a href="#" class="nav__link">How we work</a></li>
           <li class="nav__list-item"><a href="#" class="nav__link">Blog</a></li>
           <li class="nav__list-item"><a href="#" class="nav__link">Account</a></li>
-          <li class="nav__list-item"><a href="#" class="nav__link">View plans</a></li>
         </ul>
-      </div>
-      <div class="nav__menu-icon-container">
-        <img src="images/icon-hamburger.svg" alt="menu" class="nav__icon">
+        <a href="#" class="nav__link nav__link-cta">View plans</a>
       </div>
     </nav>
   </header>
   <main class="main">
     <section class="hero">
-      <img src="images/image-intro-mobile.jpg" alt="hero image" class="hero__image">
+      <picture class="hero__image">
+        <source
+          srcset="images/image-intro-mobile.jpg"
+          media="all and (max-width:375px)"
+        />
+        <source
+          srcset="images/image-intro-desktop.jpg" 
+          media="all and (min-width: 376px)"
+        />
+        <img src="images/image-intro-mobile.jpg" alt="hero image">
+      </picture>
+      <picture >
+        <source
+          srcset="images/bg-pattern-intro-left-mobile.svg"
+          media="all and (max-width:767px)"
+          class="hero__wave-top"
+        />
+        <source
+          srcset="images/bg-pattern-intro-left-desktop.svg" 
+          media="all and (min-width: 768px)"
+          class="hero__wave-top"
+        />
+        <img src="images/bg-pattern-intro-left-mobile.svg" alt="wave" class="hero__wave-top">
+      </picture>
+      <picture >
+        <source
+          srcset="images/bg-pattern-intro-right-mobile.svg"
+          media="all and (max-width:767px)"
+          class="hero__wave-bottom"
+        />
+        <source
+          srcset="images/bg-pattern-intro-right-desktop.svg" 
+          media="all and (min-width: 768px)"
+          class="hero__wave-bottom"
+        />
+        <img src="images/bg-pattern-intro-right-mobile.svg" alt="wave" class="hero__wave-bottom">
+      </picture>
       <div class="hero__content">
+        <div class="hero__divider"></div>
         <h1 class="hero__heading">Humanizing your insurance.</h1>
         <p class="hero__about">
           Get your life insurance coverage easier and faster. We blend our expertise 
           and technology to help you find the plan that’s right for you. Ensure you 
           and your loved ones are protected.
         </p>
-        <a href="#" class="hero__link">View plans</a>
+        <a href="#" class="cta__link typography-type-1">View plans</a>
       </div>
     </section>
     <section class="highlights">
+      <div class="highlights__divider"></div>
       <h2 class="highlights__heading">
         We’re different
       </h2>
       <div class="highlights__wrapper">
         <div class="highlights__highlight">
           <img src="images/icon-snappy-process.svg" alt="Snappy process" class="highlights__icon">
-          <h3 class="highlight__subtitle">
+          <h3 class="highlights__subtitle">
             Snappy Process
           </h3>
-          <p class="highlight__about">
+          <p class="highlights__about">
             Our application process can be completed in minutes, not hours. Don’t get 
             stuck filling in tedious forms.
           </p>
         </div>
-      </div>
-      <div class="highlights__wrapper">
         <div class="highlights__highlight">
           <img src="images/icon-affordable-prices.svg" alt="Affordable prices" class="highlights__icon">
-          <h3 class="highlight__subtitle">
+          <h3 class="highlights__subtitle">
             Affordable Prices
           </h3>
-          <p class="highlight__about">
+          <p class="highlights__about">
             We don’t want you worrying about high monthly costs. Our prices may be low, 
             but we still offer the best coverage possible.  
           </p>
         </div>
-      </div>
-      <div class="highlights__wrapper">
         <div class="highlights__highlight">
           <img src="images/icon-people-first.svg" alt="People first" class="highlights__icon">
-          <h3 class="highlight__subtitle">
+          <h3 class="highlights__subtitle">
             People First
           </h3>
-          <p class="highlight__about">
+          <p class="highlights__about">
             Our plans aren’t full of conditions and clauses to prevent payouts. We make 
             sure you’re covered when you need it.
           </p>
@@ -88,14 +132,16 @@
       </div>
     </section>
     <section class="cta">
-      <h2 class="cta__heading">
-        Find out more about how we work
-      </h2>
-      <a href="#" class="cta__link">How we work</a>
+      <div class="cta__container">
+        <h2 class="cta__heading">
+          Find out more about how we work
+        </h2>
+        <a href="#" class="cta__link typography-type-1">How we work</a>
+      </div>
     </section>
   </main>
   <footer class="footer">
-    <div class="footer__wrapper">
+    <div class="footer__wrapper footer__wrapper-first-block">
       <img src="images/logo.svg" alt="Inspire" class="footer__logo">
       <div class="footer__social-block">
         <a href="#" class="footer__social-link" aria-label="Click to access our Facebook account"><i class="fab fa-facebook-square"></i></a>
@@ -104,50 +150,51 @@
         <a href="#" class="footer__social-link" aria-label="Click to access our Instagram account"><i class="fab fa-instagram"></i></a>
       </div>
     </div>
-    <div class="footer__wrapper">
+    <div class="footer__wrapper footer__wrapper-second-block">
       <div class="footer__links">
-        <p class="footer__title">
+        <p class="footer__title typography-type-1">
           Our company
         </p>
         <ul class="footer__list">
-          <li class="footer__list-item"><a href="#" class="footer__link">How we work</a></li>
-          <li class="footer__list-item"><a href="#" class="footer__link">Why Insure?</a></li>
-          <li class="footer__list-item"><a href="#" class="footer__link">View plans</a></li>
-          <li class="footer__list-item"><a href="#" class="footer__link">Reviews</a></li>
+          <li class="footer__list-item"><a href="#" class="footer__link typography-type-1">How we work</a></li>
+          <li class="footer__list-item"><a href="#" class="footer__link typography-type-1">Why Insure?</a></li>
+          <li class="footer__list-item"><a href="#" class="footer__link typography-type-1">View plans</a></li>
+          <li class="footer__list-item"><a href="#" class="footer__link typography-type-1">Reviews</a></li>
         </ul>
       </div>
       <div class="footer__links">
-        <p class="footer__title">
+        <p class="footer__title typography-type-1">
           Help me
         </p>
         <ul class="footer__list">
-          <li class="footer__list-item"><a href="#" class="footer__link">FAQ</a></li>
-          <li class="footer__list-item"><a href="#" class="footer__link">Terms of use</a></li>
-          <li class="footer__list-item"><a href="#" class="footer__link">Privacy policy</a></li>
-          <li class="footer__list-item"><a href="#" class="footer__link">Cookies</a></li>
+          <li class="footer__list-item"><a href="#" class="footer__link typography-type-1">FAQ</a></li>
+          <li class="footer__list-item"><a href="#" class="footer__link typography-type-1">Terms of use</a></li>
+          <li class="footer__list-item"><a href="#" class="footer__link typography-type-1">Privacy policy</a></li>
+          <li class="footer__list-item"><a href="#" class="footer__link typography-type-1">Cookies</a></li>
         </ul>
       </div>
       <div class="footer__links">
-        <p class="footer__title">
+        <p class="footer__title typography-type-1">
           Contact
         </p>
         <ul class="footer__list">
-          <li class="footer__list-item"><a href="#" class="footer__link">Sales</a></li>
-          <li class="footer__list-item"><a href="#" class="footer__link">Support</a></li>
-          <li class="footer__list-item"><a href="#" class="footer__link">Live chat</a></li>
+          <li class="footer__list-item"><a href="#" class="footer__link typography-type-1">Sales</a></li>
+          <li class="footer__list-item"><a href="#" class="footer__link typography-type-1">Support</a></li>
+          <li class="footer__list-item"><a href="#" class="footer__link typography-type-1">Live chat</a></li>
         </ul>
       </div>
       <div class="footer__links">
-        <p class="footer__title">
+        <p class="footer__title typography-type-1">
           Others
         </p>
         <ul class="footer__list">
-          <li class="footer__list-item"><a href="#" class="footer__link">Careers</a></li>
-          <li class="footer__list-item"><a href="#" class="footer__link">Press</a></li>
-          <li class="footer__list-item"><a href="#" class="footer__link">Licenses</a></li>
+          <li class="footer__list-item"><a href="#" class="footer__link typography-type-1">Careers</a></li>
+          <li class="footer__list-item"><a href="#" class="footer__link typography-type-1">Press</a></li>
+          <li class="footer__list-item"><a href="#" class="footer__link typography-type-1">Licenses</a></li>
         </ul>
       </div>
     </div>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 </html>

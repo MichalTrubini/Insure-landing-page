@@ -5,10 +5,12 @@
 body {
     font-family: 'Karla', sans-serif;
     text-align: center;
+    font-weight: 400;
 }
 
 h1,h2, h3 {
     font-family: 'DM Serif Display', serif;
+    font-weight: 400;
 }
 
 h1 {
@@ -24,8 +26,11 @@ p {
     line-height: 2.6rem;
 }
 
-footer {
-    background: $background-footer;
+.typography-type-1 {
+    font-weight: 700;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    letter-spacing: 1.5px;
 }
 
 //TYPOGRAPHY AND COLORS ----END
@@ -34,14 +39,55 @@ li {
     list-style: none;
 }
 
+.header, .main, .footer {
+    max-width: 41.4rem;
+    width: 100%;
+    margin: auto;
+}
+
 .nav {
-    padding: 2.4rem 2.4rem;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+
+    &__wrapper {
+        padding: 2.4rem 2.4rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__menu {
+        display: none;
+    }
 
     &__mobile-menu {
-        display: none;
+
+        height: 0;
+        opacity: 0;
+        background: url(../images/bg-pattern-mobile-nav.svg) bottom/contain no-repeat,$background-mobile-menu;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+        margin-bottom: 2.4rem;
+    }
+
+    &__link {
+        color: $color-text-white;
+        font-size: 2rem;
+        line-height: 4rem;
+        font-weight: 700;
+        letter-spacing: 1.36px;
+        text-transform: uppercase;
+    }
+
+    &__link-cta {
+        display: inline-block;
+        width: 100%;
+        padding: 0.9rem 0 0.7rem;
+        border: 1px solid white;
     }
 }
 
@@ -50,9 +96,440 @@ li {
     display: flex;
     flex-direction: column;
     color: $color-text-white;
+    position: relative;
+
+    &__wave-top {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+    }
+
+    &__wave-bottom  {
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        bottom: -177px;
+    }
 
     &__content {
         background: $background-hero;
         padding: 9.3rem 2.4rem;
     }
+
+    &__heading {
+        margin-bottom: 1.6rem;
+    }
+
+    &__about {
+        margin-bottom: 3.2rem;
+    }
+}
+
+.highlights {
+    padding: 14rem 2.4rem;
+
+    &__divider {
+        width: 15rem;
+        height: 1px;
+        margin: auto;
+        background: #C396C6;
+        margin-bottom: 4rem;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 5.6rem;
+    }
+
+    &__heading {
+        font-size: 4.8rem;
+        line-height: 4.8rem;
+        letter-spacing: -0.67px;
+        color: $color-heading-dark;
+        margin-bottom: 8rem;
+    }
+
+    &__icon {
+        margin-bottom: 3.2rem;
+    }
+
+    &__subtitle {
+        font-size: 2.8rem;
+        line-height: 3.8rem;
+        letter-spacing: -0.39px;
+        margin-bottom: 1.6rem;
+    }
+}
+
+.cta {
+    padding: 0 2.4rem 14rem;
+
+    &__container {
+        background: url(../images/bg-pattern-how-we-work-mobile.svg) right top no-repeat,$background-cta-container;
+        color: $color-text-white;
+        padding: 7.2rem 2.4rem;
+    }
+
+    &__heading {
+        font-size: 4rem;
+        line-height: 4rem;
+        letter-spacing: -0.56px;
+        margin-bottom: 4rem;
+    }
+
+    &__link {
+        color: $White;
+        text-transform: uppercase;
+        display: inline-block;
+        padding: 1.3rem 2.8rem 1.2rem;
+        border: 1.5px solid white;
+    }
+}
+
+.footer {
+    background: url(../images/bg-pattern-footer-mobile.svg) top no-repeat, $background-footer;
+    padding: 8.8rem 2.4rem;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__wrapper-first-block {
+        padding-bottom: 4rem;
+        border-bottom: 1px solid #DADADA;
+    }
+
+    &__wrapper-second-block {
+        padding-top: 4rem;
+        gap: 4rem;
+    }
+
+    &__logo {
+        margin-bottom: 3.2rem;
+    }
+
+    &__social-block {
+        display:flex;
+        gap: 1.6rem;
+        font-size: 2.4rem;
+    }
+
+    &__social-link {
+        color: $Dark-Grayish-Violet;
+    }
+
+    &__title {
+        color: $color-footer-light;
+        margin-bottom: 3.6rem;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+    }
+
+    &__link {
+        color: $color-footer-dark;
+    }
+}
+
+@media screen and (min-width:768px) {
+
+    body {
+        text-align: left;
+    }
+
+    .header, .main, .footer {
+        max-width: 144rem;
+        width: 100%;
+        margin: auto;
+    }
+
+    .nav {
+
+        &__wrapper {
+            padding: 3.2rem;
+        }
+
+        &__menu-icon-container {
+            display: none;
+        }
+
+        &__menu {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        &__list {
+            flex-direction: row;
+            margin-bottom: 0;
+        }
+
+        &__list-item {
+            width: max-content;
+        }
+
+        &__link {
+            color: $Dark-Grayish-Violet;
+            font-size: 1.3rem;
+            line-height: 1.5rem;
+            letter-spacing: 1.5px;
+        }
+
+        &__link-cta--primary {
+            padding: 1.3rem 2.85rem;
+            border: 1.5px solid #2C2830;
+            color: black;
+            margin-left: 2rem;
+        }
+    }
+
+    .hero {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        position: relative;
+        background: $background-hero;
+        padding: 4rem 3.2rem;
+
+        &__divider {
+            width: 15rem;
+            height: 1px;
+            background: white;
+            position: absolute;
+            top: 4rem;
+        }
+
+        &__image {
+            position: absolute;
+            z-index: 1;
+            width: 40%;
+            max-width: 40rem;
+        }
+
+        &__wave-top {
+            position: absolute;
+            bottom: -300px;
+            left: 0;
+            width: 150px;
+        }
+
+        &__wave-bottom  {
+            right: 0;
+            top: 0;
+            width: 20%;
+        }
+
+        &__content {
+            text-align: left;
+            padding: 6.3rem 0;
+            width: 50%;
+        }
+    }
+
+    .highlights {
+        padding: 14rem 3.2rem;
+
+        &__divider {
+            margin: 0 auto 6.3rem 0;
+        }
+
+        &__wrapper {
+            flex-direction: row;
+            gap: 4.8rem;
+        }
+
+        &__highlight {
+            max-width: 35rem;
+        }
+
+        &__about {
+            color: $color-main;
+        }
+    }
+
+    .cta {
+        padding: 0 3.2rem 15rem;
+
+        &__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__heading {
+            width: 53%;
+            margin-bottom: 0;
+        }
+    }
+
+    .footer {
+        background: url(../images/bg-pattern-footer-desktop.svg) no-repeat, $background-footer;
+        
+        &__wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        &__logo {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .footer {
+
+        &__links {
+            max-width: 25.5rem;
+            width: 100%;
+        }
+
+        &__link:hover {
+            text-decoration: underline;
+        }
+
+        &__social-link:hover {
+            color: $Dark-Violet;
+        }
+
+        &__wrapper-second-block {
+            justify-content: flex-start;
+            gap: 3rem;
+        }
+    }
+
+    .cta {
+        &__link:hover {
+            background: $White;
+            color:$Very-Dark-Violet;
+            font-weight: 700;
+        }
+    }
+
+    .nav {
+
+        &__link:hover {
+            color: $Very-Dark-Violet;
+        }
+
+        &__link-cta--primary:hover {
+            color: $White;
+            background: $Very-Dark-Violet;
+        }
+    }
+}
+
+@media screen and (min-width:1440px) {
+    .nav {
+        &__wrapper {
+            padding: 2.1rem 16.5rem 1.9rem;
+        }
+
+        &__list {
+            gap: 2.5rem;
+        }
+
+        &__link-cta--primary {
+            margin-left: 3.3rem;
+        }
+    }
+
+    .hero {
+        padding: 10.5rem 16.5rem;
+
+        &__divider {
+            top: 10.5rem;
+        }
+
+        &__content {
+            max-width: 54rem;
+        }
+
+        &__heading {
+            font-size: 7.2rem;
+            line-height: 6.4rem;
+            letter-spacing: -1px;
+            padding-right: 1rem;
+        }
+
+        &__about {
+            margin-bottom: 2.4rem;
+        }
+
+        &__image {
+            max-width: 54rem;
+        }
+
+        &__wave-top {
+            bottom: -375px;
+            width: 220px;
+        }
+
+        &__wave-bottom {
+            width: 40rem;
+        }
+    }
+
+    .highlights {
+        padding: 30.5rem 16.5rem 15.8rem;
+
+        &__heading {
+            font-size: 7.2rem;
+            line-height: 6.4rem;
+            letter-spacing: -1px;
+            margin-bottom: 9.6rem;
+        }
+
+        &__wrapper {
+            gap: 0;
+            justify-content: space-between;
+        }
+
+        &__highlight {
+            max-width: 35rem;
+            width: 100%;
+        }
+    }
+
+    .cta {
+        padding: 0 16.5rem 15.5rem;
+
+        &__container {
+            padding: 6.9rem 8.1rem;
+            background: url(../images/bg-pattern-how-we-work-desktop.svg) right top no-repeat, #2d2640;
+        }
+
+        &__heading {
+            font-size: 5.6rem;
+            line-height: 5.6rem;
+            letter-spacing: -0.78px;
+            width: 50%;
+        }
+    }
+
+    .footer {
+        padding: 6.4rem 16.5rem;
+
+        &__wrapper-first-block {
+            padding-bottom: 3.6rem;
+        }
+
+        &__wrapper-second-block {
+            padding-top: 4.8rem;
+        }
+    }
+}
+
+
+.show-element {
+    transition: opacity 500ms;
+    padding: 4rem 2.4rem 29.9rem;
+    opacity: 1;
 }
